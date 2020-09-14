@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "testKomma10Zahlen",
+      "setup": "",
+      "run": "gradle test --tests TestFahrscheinAutomat.testKomma10Zahlen",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "testKomma05Zahlen",
+      "setup": "",
+      "run": "gradle test --tests TestFahrscheinAutomat.testKomma05Zahlen",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "testKomma10Rueckgabe",
+      "setup": "",
+      "run": "gradle test --tests TestFahrscheinAutomat.testKomma10Rueckgabe",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "testKomma05Rueckgabe",
+      "setup": "",
+      "run": "gradle test --tests TestFahrscheinAutomat.testKomma05Rueckgabe",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "testAnzahlTickets",
+      "setup": "",
+      "run": "gradle test --tests TestFahrscheinAutomat.testAnzahlTickets",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 2
+    }
+  ]
+}
