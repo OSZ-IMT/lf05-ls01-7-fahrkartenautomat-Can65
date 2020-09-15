@@ -17,6 +17,7 @@ class Fahrkartenautomat {
         float rueckgabebetrag;
         // Die Eingabe erfolgt anwenderfreudlich mit Dezimalpunkt: just testing
         float eingegebenerBetrag;
+        float anzahlTickets;
 
 
 
@@ -25,12 +26,14 @@ class Fahrkartenautomat {
         // -----------------------------------
         System.out.print("Zu zahlender Betrag (Euro): ");
         zuZahlenderBetrag = tastatur.nextFloat();
+        System.out.print("Anzahl der Tickets : ");
+        anzahlTickets = tastatur.nextFloat();
 
         // Geldeinwurf
         // -----------
         eingezahlterGesamtbetrag = (float) 0.0;
-        while (eingezahlterGesamtbetrag < zuZahlenderBetrag) {
-            double d = zuZahlenderBetrag - eingezahlterGesamtbetrag;
+        while (eingezahlterGesamtbetrag < zuZahlenderBetrag*anzahlTickets) {
+            double d = zuZahlenderBetrag*anzahlTickets - eingezahlterGesamtbetrag;
             System.out.printf( "%.2f\n" ,     d);
             System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
             eingeworfeneMuenze = tastatur.nextFloat();
@@ -53,7 +56,7 @@ class Fahrkartenautomat {
 
         // Rückgeldberechnung und -Ausgabe
         // -------------------------------
-        rueckgabebetrag = eingezahlterGesamtbetrag - zuZahlenderBetrag;
+        rueckgabebetrag = eingezahlterGesamtbetrag - zuZahlenderBetrag*anzahlTickets;
         if (rueckgabebetrag > 0.0) {
             System.out.println("Der Rückgabebetrag in Höhe von " + rueckgabebetrag + " EURO");
             System.out.println("wird in folgenden Münzen ausgezahlt:");
