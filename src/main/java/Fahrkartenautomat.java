@@ -11,26 +11,29 @@ class Fahrkartenautomat {
         // Achtung!!!!
         // Hier wird deutlich, warum double nicht für Geldbeträge geeignet ist.
         // =======================================
-        double zuZahlenderBetrag;
-        double eingezahlterGesamtbetrag;
-        double eingeworfeneMuenze;
-        double rueckgabebetrag;
+        float zuZahlenderBetrag;
+        float eingezahlterGesamtbetrag;
+        float eingeworfeneMuenze;
+        float rueckgabebetrag;
         // Die Eingabe erfolgt anwenderfreudlich mit Dezimalpunkt: just testing
-        double eingegebenerBetrag;
+        float eingegebenerBetrag;
+
+
 
         // Den zu zahlenden Betrag ermittelt normalerweise der Automat
         // aufgrund der gewählten Fahrkarte(n).
         // -----------------------------------
         System.out.print("Zu zahlender Betrag (Euro): ");
-        zuZahlenderBetrag = tastatur.nextDouble();
+        zuZahlenderBetrag = tastatur.nextFloat();
 
         // Geldeinwurf
         // -----------
-        eingezahlterGesamtbetrag = 0.0;
+        eingezahlterGesamtbetrag = (float) 0.0;
         while (eingezahlterGesamtbetrag < zuZahlenderBetrag) {
-            System.out.println("Noch zu zahlen: " + (zuZahlenderBetrag - eingezahlterGesamtbetrag));
+            double d = zuZahlenderBetrag - eingezahlterGesamtbetrag;
+            System.out.printf( "%.2f\n" ,     d);
             System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
-            eingeworfeneMuenze = tastatur.nextDouble();
+            eingeworfeneMuenze = tastatur.nextFloat();
             eingezahlterGesamtbetrag += eingeworfeneMuenze;
         }
 
