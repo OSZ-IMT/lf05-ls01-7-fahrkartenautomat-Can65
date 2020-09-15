@@ -98,3 +98,7 @@ class Fahrkartenautomat {
                 "Wir wünschen Ihnen eine gute Fahrt.");
     }
 }
+
+Deklarierte Variablen: "zuZahlenderBetrag"; "eingezahlterBetrag"; "eingeworfenemuenze"; "rueckgabebetrag"; "eingegebenerBetrag"; "anzahlTickets"; "float d"
+
+Datentypen: "float"; "d" 
