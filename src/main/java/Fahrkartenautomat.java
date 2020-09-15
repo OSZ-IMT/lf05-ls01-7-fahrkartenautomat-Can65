@@ -33,7 +33,7 @@ class Fahrkartenautomat {
         // -----------
         eingezahlterGesamtbetrag = (float) 0.0;
         while (eingezahlterGesamtbetrag < zuZahlenderBetrag*anzahlTickets) {
-            double d = zuZahlenderBetrag*anzahlTickets - eingezahlterGesamtbetrag;
+            float d = zuZahlenderBetrag*anzahlTickets - eingezahlterGesamtbetrag;
             System.out.printf( "%.2f\n" ,     d);
             System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
             eingeworfeneMuenze = tastatur.nextFloat();
